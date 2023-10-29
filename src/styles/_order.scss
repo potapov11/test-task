@@ -1,0 +1,132 @@
+.order {
+	background: url('image/bck-bottom.png') no-repeat center;
+	background-size: cover;
+	font-style: normal;
+	line-height: normal;
+	color: $text-color;
+	padding-bottom: 150px;
+
+	&__text {
+		padding-top: 120px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 30px;
+		text-align: center;
+		font-size: 36px;
+		font-weight: 800;
+		text-transform: uppercase;
+
+		span {
+			color: $info-blue;
+		}
+	}
+
+	&__subtitle {
+		margin: 0;
+		margin-bottom: 80px;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	&__icons {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 80px;
+	}
+
+	&__icon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		width: 210px;
+		text-align: center;
+
+		span {
+			display: block;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&__icon-text {
+		min-height: 38px;
+		margin-top: 20px;
+	}
+
+	&__icon--search {
+		width: 100px;
+		height: 100px;
+		background: url('image/top-icon.png') no-repeat center;
+		background-size: 100px 100px;
+		background-position-y: top;
+	}
+	&__icon--percent {
+		width: 100px;
+		height: 100px;
+		background: url('image/percent-icon.png') no-repeat center;
+		background-size: 100px 100px;
+		background-position-y: top;
+	}
+	&__icon--folder {
+		width: 100px;
+		height: 100px;
+		background: url('image/folder-icon.png') no-repeat center;
+		background-size: 100px 100px;
+		background-position-y: top;
+	}
+	&__icon--letter {
+		width: 100px;
+		height: 100px;
+		background: url('image/letter-icon.png') no-repeat center;
+		background-size: 100px 100px;
+		background-position-y: top;
+	}
+	&__icon--money {
+		width: 100px;
+		height: 100px;
+		background: url('image/money-icon.png') no-repeat center;
+		background-size: 100px 100px;
+		background-position-y: top;
+	}
+
+	&__icon:not(:nth-child(5))::before {
+		position: absolute;
+		top: 32%;
+		display: block;
+		content: '';
+		width: 145%;
+		height: 6px;
+		background-image: url('image/points.png');
+		left: 78%;
+		background-repeat: no-repeat;
+	}
+}
+
+@media (max-width: 1000px) {
+	.order {
+		padding-bottom: 80px;
+
+		&__icon:not(:nth-child(5))::before {
+			display: none;
+		}
+
+		&__icons {
+			display: flex;
+			justify-content: center;
+			// margin-bottom: 80px;
+			flex-wrap: wrap;
+		}
+
+		&__icon {
+			span {
+				font-size: 13px;
+			}
+		}
+	}
+}

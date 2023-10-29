@@ -1,0 +1,329 @@
+.form {
+	font-style: normal;
+	box-sizing: border-box;
+
+	&__inputs-top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	&__email,
+	&__name,
+	&__file-box {
+		width: 31%;
+		border-radius: 3px;
+		background: rgba(255, 255, 255, 0.85);
+		height: 45px;
+	}
+
+	&__box {
+		position: relative;
+		width: 29.5%;
+		border-radius: 3px;
+		border: 1px solid #fff;
+		background: rgba(255, 255, 255, 0.85);
+		color: $color-text-input;
+		font-size: 18px;
+		font-weight: 400;
+		cursor: pointer;
+	}
+
+	&__select {
+		display: block;
+		position: relative;
+		height: 45px;
+		padding: 10px;
+		border-radius: 3px;
+		border: 1px solid #fff;
+		background: rgba(255, 255, 255, 0.85);
+		color: $color-text-input;
+		font-size: 18px;
+		font-weight: 400;
+		cursor: pointer;
+	}
+
+	&__select::after {
+		position: absolute;
+		top: 8px;
+		right: 0;
+		display: block;
+		content: '';
+		width: 30px;
+		height: 30px;
+		background: url('image/select-arrow.png') center;
+		background-size: 30px 30px;
+	}
+
+	&__select-list {
+		top: 46px;
+		margin: 0;
+		max-height: 0px;
+		height: 0;
+		text-align: left;
+		overflow: hidden;
+		transition: 0.3s linear;
+		box-sizing: border-box;
+		position: absolute;
+		list-style: none;
+		color: $text-color;
+		border-radius: 3px;
+		border: 1px solid #3d4050;
+		background: rgba(39, 39, 51, 0.9);
+		position: absolute;
+		z-index: 2;
+	}
+
+	&__select-list::-webkit-scrollbar-thumb,
+	&__select-list::-moz-scrollbar-thumb,
+	&__select-list::-ms-scrollbar-thumb {
+		background-color: #8d1818;
+		border-radius: 50px;
+		height: 50px; /* Добавленное свойство */
+	}
+
+	&__select-list {
+		overflow: hidden;
+		scrollbar-width: thin; /* Firefox */
+		scrollbar-color: #000000 transparent; /* Firefox */
+		scrollbar-face-color: #000000; /* Chrome, Safari, Opera */
+	}
+
+	&__select-list li {
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 34px;
+	}
+	&__select-list li:hover {
+		color: $list__active;
+	}
+
+	&__select-list-show {
+		height: 190px;
+		padding: 10px;
+		overflow-y: scroll;
+		width: 100%;
+		max-height: 900px;
+		transition: max-height 1s ease-in;
+	}
+
+	&__email-input,
+	&__name-input {
+		padding: 10px;
+		width: 100%;
+		// border-radius: 3px;
+		border: 1px solid #fff;
+		color: $color-text-input;
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	&__email-input::placeholder,
+	&__name-input::placeholder {
+		color: $color-text-input;
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	&__select {
+		position: relative;
+	}
+
+	&__select-field {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		overflow-y: scroll;
+	}
+
+	&__file-input {
+		display: none;
+	}
+
+	&__file-label {
+		position: relative;
+		display: block;
+		height: 100%;
+		padding: 13px;
+		width: 100%;
+		text-align: center;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 600;
+		color: #272733;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	&__file-label::before {
+		position: absolute;
+		top: 10px;
+		left: 23%;
+		display: block;
+		content: '';
+		width: 17px;
+		height: 20px;
+		background: url('image/label-icon.svg') no-repeat;
+		background-size: cover;
+	}
+
+	&__inputs-bottom {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 0 15px 0;
+		margin-bottom: 70px;
+	}
+
+	&__range-box {
+		position: relative;
+		width: 65%;
+	}
+
+	&__range-text {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__range-inputbox {
+		width: 100%;
+		position: absolute;
+		top: 33px;
+		left: 0;
+		height: 31px;
+	}
+
+	.form__range-input {
+		appearance: none;
+		width: 100%;
+		height: 6px;
+		outline: none;
+		background-color: #bdbdc0;
+		border-radius: 0.25rem;
+	}
+
+	/* Для WebKit браузеров (Chrome, Safari) */
+	.form__range-input::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		background-color: $list__active;
+		border: 5px solid #286690;
+		border-radius: 1rem;
+		cursor: pointer;
+	}
+
+	/* Для Firefox */
+	.form__range-input::-moz-range-thumb {
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		background-color: $list__active;
+		border: 5px solid #286690;
+		border-radius: 1rem;
+		cursor: pointer;
+	}
+
+	&__button-box {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 13px;
+		font-weight: 400;
+		width: 370px;
+		padding: 15px;
+		border-radius: 4px;
+		text-transform: uppercase;
+		cursor: pointer;
+		color: #fff;
+		border: 1px solid #fff;
+		background: #3e9cdc;
+	}
+
+	&__button:hover {
+		opacity: 0.9;
+	}
+}
+
+@media (max-width: 1100px) {
+	.form {
+		&__file-label::before {
+			left: 15%;
+		}
+
+		&__select {
+			font-size: 14px;
+		}
+
+		&__file-label,
+		&__email-input::placeholder,
+		&__name-input::placeholder {
+			font-size: 14px;
+			font-weight: normal;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.form {
+		&__file-label::before {
+			left: 12%;
+		}
+	}
+}
+
+@media (max-width: 780px) {
+	.form {
+		&__file-label {
+			text-align: right;
+		}
+	}
+}
+
+@media (max-width: 680px) {
+	.form {
+		&__inputs-top,
+		&__inputs-bottom {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__box,
+		&__email,
+		&__name {
+			width: 80%;
+			margin-bottom: 20px;
+		}
+
+		&__file-box {
+			width: 80%;
+			display: flex;
+			margin: 70px auto;
+		}
+
+		&__file-label {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__inputs-bottom {
+			align-items: baseline;
+			margin-bottom: 0;
+		}
+
+		&__range-box {
+			width: 100%;
+		}
+
+		&__range-text,
+		&__range-output {
+			font-size: 14px;
+		}
+	}
+}

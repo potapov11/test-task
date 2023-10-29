@@ -1,0 +1,56 @@
+.body {
+	font-family: 'Lato', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// border: 1px solid red;
+}
+
+.container {
+	max-width: 1169px;
+	margin: 0 auto;
+	padding: 0 15px;
+	overflow: hidden;
+}
+
+.show {
+	opacity: 0.97 !important;
+	visibility: visible !important;
+	transition: opacity 0.5s;
+	// display: block;
+}
+
+.hide {
+	display: none;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Regular.woff2');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Medium.woff2');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Semibold.woff2');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Bold.woff2');
+	font-weight: 700;
+}

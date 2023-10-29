@@ -1,0 +1,123 @@
+.intro {
+	height: 850px;
+	margin-top: 0;
+	background: url('image/bck-image.png') no-repeat center;
+	font-style: normal;
+	line-height: normal;
+
+	&__wrapper {
+		display: flex;
+		// height: 850px;
+	}
+
+	&__info {
+		margin-top: 250px;
+		padding: 2px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 110px;
+		font-size: 48px;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		span {
+			color: $info-blue;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	&__list {
+		list-style: none;
+
+		li {
+			position: relative;
+			margin-bottom: 7px;
+			font-size: 20px;
+			font-weight: 400;
+		}
+
+		li::before {
+			position: absolute;
+			left: -15px;
+			top: 10px;
+			content: '';
+			display: block;
+			width: 10px;
+			height: 2px;
+			background-color: black;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		margin-top: 80px;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 13px;
+		font-weight: 400;
+		width: 185px;
+		padding: 15px;
+		border-radius: 4px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	&__btn:hover {
+		opacity: 0.9;
+	}
+
+	&__btn--order {
+		margin-right: 30px;
+		color: #fff;
+		border: 1px solid #fff;
+		background: $info-blue;
+	}
+	&__btn--more {
+		border: 1px solid #6f6d7b;
+		background: #fff;
+	}
+}
+
+@media (max-width: 1000px) {
+	.intro {
+		&__info {
+			margin-top: 200px;
+		}
+
+		&__title {
+			font-size: 38px;
+		}
+	}
+}
+
+@media (max-width: 680px) {
+	.intro {
+		&__buttons {
+			flex-direction: column;
+			margin-top: 50px;
+		}
+
+		&__info {
+			margin-bottom: 180px;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__btn:first-child {
+			margin-bottom: 10px;
+		}
+	}
+}

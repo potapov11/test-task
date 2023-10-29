@@ -1,0 +1,120 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Тестовое
+	body.body 
+			header.header 
+				.container
+					.header__wrapper 
+						a(href="#")
+							img.header__logo(src="./image/logo.png", alt="Лого") 
+						.header__box.menu
+							.menu__box.hide
+								.menu__box-line.menu__box-line--1
+								.menu__box-line.menu__box-line--2
+								.menu__box-line.menu__box-line--3
+						nav.header__nav
+							ul.header__list
+								li.header__item 
+									a.header__active(href="#")  Бизнес
+								li.header__item 
+									a(href="#") О нас 
+								li.header__item 
+									a(href="#") Цены
+								li.header__item 
+									a(href="#") Оформить заказ
+			.intro 
+				.container
+						.intro__wrapper
+							.intro__info 
+								h1.intro__title 
+									span Lorem ipsum 
+									|dolor sit#[br] amet consectetur 
+									span adipiscing
+								p.intro__text At vero eos et accusamus et iusto odio dignissimos ducimus!
+								ul.intro__list
+									li.intro__item Totam rem aperiam eaque ipsa
+									li.intro__item Sit voluptatem accusantium doloremque laudantium
+									li.intro__item Sed ut perspiciatis, unde omnis iste natus error
+								.intro__buttons 	
+									button.intro__btn.intro__btn--order(type="button") Заказать
+									button.intro__btn.intro__btn--more(type="button") Подробнее
+			.order 
+				.container
+					.order__text 
+						p.order__title Оформление 
+							span заказа		
+						p.order__subtitle Перед заполнением формы ознакомьтесь с нашей схемой работы!		
+					.order__icons 
+						.order__icon 
+							.order__icon--search
+							.order__icon-text
+								span Lorem ipsum dolor sit amet
+						.order__icon 
+							.order__icon--percent
+							.order__icon-text
+								span Сonsecteturadipiscing elit
+						.order__icon 
+							.order__icon--folder
+							.order__icon-text
+								span Sed do eiusmod tempor
+						.order__icon 
+							.order__icon--letter
+							.order__icon-text
+								span Esse cillum doloreeu fugiat
+						.order__icon
+							.order__icon--money
+							.order__icon-text
+								span Excepteur sint occaecat cupidatat non proident
+					.order__form-box 
+						form.order__form.form(action="#")(method="get") 
+							.form__inputs-top 
+								.form__box
+									btn.form__select(name="item")(value="") Выберите тип системы
+									ul.form__select-list
+										li Sed ut perspiciatis
+										li Nemo enim ipsam
+										li Et harum quidem
+										li Temporibus autem
+										li Itaque earum rerum
+								.form__email 
+									input.form__email-input(type="email")(name="email")(placeholder='Ваш e-mail')
+								.form__name 
+									input.form__name-input(type="text")(name="name")(placeholder='Ваше имя')
+							.form__inputs-bottom 
+								.form__range-box
+									.form__range-text
+										p.form__range-text Sed ut perspiciatis, unde omnis iste natus
+										span.form__range-output 75 %
+									.form__range-inputbox
+										input.form__range-input(type='range' name='range' min='0' max='100' value='70' step='1')
+								.form__file-box
+									input.form__file-input(type='file' name="file" id='file' accept="image/*" )
+									label.form__file-label(for="file") Прикрепить файл
+						.form__button-box 
+							input.form__button(type='submit', value="Отправить") 
+			footer.footer 
+				.container 
+					.footer__row
+						span.footer__rights © 2018 «LoremIpsum.net» Все права защищены.
+						.footer__pays 
+							ul.footer__list
+								li.footer__item 
+									img.footer__item--wallet(src="image/qiwi-icon.png", alt="logo")
+									| QIWI wallet 
+								li.footer__item 
+									img.footer__item--money(src="image/ya-icon.png", alt="logo")
+									| Yandex Money
+								li.footer__item 
+									img.footer__item--web(src="image/web-icon.png", alt="logo")
+									| Web Money
+						.footer__contacts 
+							.footer__mail 
+								img.footer__img-mail(src="image/mail-icon.png", alt="logo")
+								a(href="mailto:info@ipsum228.com") info@ipsum228.com
+							.footer__vk
+								img.footer__img-vk(src="image/vk-icon.png", alt="logo")
+								a(href="https://vk.com", target="_blank") Мы вконтакте
+
