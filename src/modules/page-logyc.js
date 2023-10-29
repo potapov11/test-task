@@ -20,4 +20,27 @@ function menuOpen() {
 	});
 }
 
-export { checkBtn, menuOpen };
+function pageUp() {
+	const btn = document.querySelector('.btn-up');
+	window.addEventListener('scroll', () => {
+		const scroll = window.scrollY;
+		console.log(scroll);
+		if (scroll > 750) {
+			btn.classList.remove('invisible');
+			btn.classList.add('show');
+		} else if (scroll < 750) {
+			btn.classList.remove('show');
+			btn.classList.add('invisible');
+		}
+	});
+
+	btn.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: 'smooth',
+		});
+	});
+}
+
+export { checkBtn, menuOpen, pageUp };

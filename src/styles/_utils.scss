@@ -27,11 +27,16 @@ button:focus {
 	opacity: 0.97 !important;
 	visibility: visible !important;
 	transition: opacity 0.5s;
-	// display: block;
+}
+
+.invisible {
+	visibility: hidden;
+	// transition: opacity 0.5s;
 }
 
 .hide {
 	display: none;
+	transition: 0.4s;
 }
 
 @font-face {
